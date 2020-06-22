@@ -1,4 +1,7 @@
 // leetcode problem 169. Majority Element 
+//find the majority element in an array. The input has one majority element which is above floor(n{input) / 2) 
+
+// the best two solutions in terms of shortness and speed are below 
 
 
 
@@ -17,7 +20,7 @@
 
 
 
-	int majorityElementSort(vector<int> &nums){
+    int majorityElementSort(vector<int> &nums){
     //sorting the entire vector first then passing then returning the middle number which should be the majority 
         sort(nums.begin(), nums.end());
         return nums[nums.size() / 2 ]; 
@@ -54,33 +57,33 @@
 
 		cout << "Enter numbers separated by spaces: ";
    		getline(cin, line);
-    	istringstream stream(line);
-    	while (stream >> number)
-        	numbers.push_back(number);
+    		istringstream stream(line);
+    		while (stream >> number)
+        		numbers.push_back(number);
 
 		auto start = high_resolution_clock::now(); 
-        int majorityElementSortVal = majorityElementSort(numbers); 
-        auto stop = high_resolution_clock::now(); 
+       		int majorityElementSortVal = majorityElementSort(numbers); 
+        	auto stop = high_resolution_clock::now(); 
 
-        auto duration = duration_cast<microseconds>(stop - start); 
+       		auto duration = duration_cast<microseconds>(stop - start); 
+	
+        	auto start2 = high_resolution_clock::now(); 
+        	int majorityElementBoyesVal = majorityElementBoyes(numbers);
+        	auto stop2 = high_resolution_clock::now(); 
 
-        auto start2 = high_resolution_clock::now(); 
-        int majorityElementBoyesVal = majorityElementBoyes(numbers);
-        auto stop2 = high_resolution_clock::now(); 
+        	auto duration2 = duration_cast<microseconds>(stop2 - start2); 
 
-        auto duration2 = duration_cast<microseconds>(stop2 - start2); 
+        	cout << "Sorting first: " << majorityElementSortVal  <<  " : Time taken: " << duration.count() <<  " microseconds" << "\n" ; 
+        	cout << "Boyes Algorithm: " << majorityElementBoyesVal << " : Time taken: " << duration2.count() << " microseconds" << "\n";
 
-        cout << "Sorting first: " << majorityElementSortVal  <<  " : Time taken: " << duration.count() <<  " microseconds" << "\n" ; 
-        cout << "Boyes Algorithm: " << majorityElementBoyesVal << " : Time taken: " << duration2.count() << " microseconds" << "\n";
-
-        return -1; 
+        	return -1; 
 	}
 
 /** 
-The results show that the Boyes algorithm is evidently faster even in small problems. This is because the sorting algorithm requires O(nlogn)
-to sort the array first. Therefore despite the code being shorter, as the input gets larger, this is not a good solution. 
-Boyes algorithm on the other hand provides a more suitable solution to this problem, efficiently solving the problem in O(1) time. 
-
+The results show that the Boyes algorithm is evidently faster even in small problems. This is because the sorting 
+algorithm requires O(nlogn) to sort the array first. Therefore despite the code being shorter, as the input gets larger,
+this is not a good solution. Boyer-Moores algorithm on the other hand provides a more suitable solution to this problem,
+efficiently solving the problem in O(n) time, as it passes through the array once only.
 **/ 
 
 
