@@ -13,3 +13,5 @@ problem 169: find the majority element in an array
 problem 283: move zeroes to end of the array 
 
 problem 448: find all numbers disappeared
+
+problem 70: Climbing Stairs 
