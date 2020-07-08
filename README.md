@@ -17,3 +17,5 @@ problem 448: find all numbers disappeared
 problem 70: Climbing Stairs 
 
 problem 101: Symmetrical Trees - marked to try again in the future. 
+
+problem 427: path sum III - found this difficult, not very comfortable with trees at the moment 
