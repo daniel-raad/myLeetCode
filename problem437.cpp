@@ -96,3 +96,52 @@ public:
     
 
 };
+
+
+
+
+
+
+
+/**
+
+
+BELOW IS SIMILAR TO MY SOLUTION JUST MUCH TIDIER CODE while also using a list to good effect 
+it performs the exact same functionality in O(n^2 ) time, however is perhaps easier to see the recursive effect 
+
+I have not been able to find a solution which can do it faster than O(n^2) time. 
+
+*/
+
+
+    int result = 0; 
+    vector<int> mylist; 
+    int pathSum(TreeNode* root, int sum){
+        getSum(root, sum);
+        return result; 
+    }
+    
+    
+    void getSum(TreeNode* root, int sum){
+        
+        if(root == NULL ) return; 
+        
+        mylist.push_back(root -> val); 
+        
+        getSum(root->left, sum);
+        getSum(root-> right, sum);
+        
+    
+        
+        int temp = 0; 
+        for(int i = mylist.size()-1; i >= 0; i--){
+            temp += mylist.at(i);
+            if(temp == sum) result++; 
+        }
+        
+        mylist.pop_back();
+    } 
+
+
+
+
