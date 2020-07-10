@@ -21,3 +21,5 @@ problem 101: Symmetrical Trees - marked to try again in the future.
 problem 427: path sum III - found this difficult, not very comfortable with trees at the moment 
 
 problem 1: two sum - interesting information about use of hashmaps
+
+problem 155: min stack - again, more interesting use of hasing to provide constant time solutions
