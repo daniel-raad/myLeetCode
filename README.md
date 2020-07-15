@@ -23,3 +23,5 @@ problem 427: path sum III - found this difficult, not very comfortable with tree
 problem 1: two sum - interesting information about use of hashmaps
 
 problem 155: min stack - again, more interesting use of hasing to provide constant time solutions
+
+problem 141: linked list cycle: two pointers- floyd algorithm
