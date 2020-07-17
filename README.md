@@ -25,3 +25,5 @@ problem 1: two sum - interesting information about use of hashmaps
 problem 155: min stack - again, more interesting use of hasing to provide constant time solutions
 
 problem 141: linked list cycle: two pointers- floyd algorithm
+
+problem 234; isPALINDROME?????? - two pointers used - finding the middle of a linked list 
