@@ -29,3 +29,5 @@ problem 141: linked list cycle: two pointers- floyd algorithm
 problem 234; isPALINDROME?????? - two pointers used - finding the middle of a linked list 
 
 problem 581:Shortest Unsorted Continuous Subarray - takes a variety of thinking. nice solution and defo worth looking over
+
+problem 338: counting bits - did not complete myself, need to have better look at patterns in bits 
