@@ -31,3 +31,5 @@ problem 234; isPALINDROME?????? - two pointers used - finding the middle of a li
 problem 581:Shortest Unsorted Continuous Subarray - takes a variety of thinking. nice solution and defo worth looking over
 
 problem 338: counting bits - did not complete myself, need to have better look at patterns in bits 
+
+problem 401: binary watch - backtracking problem 
