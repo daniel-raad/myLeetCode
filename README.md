@@ -33,3 +33,5 @@ problem 581:Shortest Unsorted Continuous Subarray - takes a variety of thinking.
 problem 338: counting bits - did not complete myself, need to have better look at patterns in bits 
 
 problem 401: binary watch - backtracking problem 
+
+problem 746: min cost climbing stairs - dynamic programming with some greedy 
